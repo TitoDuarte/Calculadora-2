@@ -6,30 +6,38 @@
     <title>Calculadora 2</title>
 </head>
 <body>
+  <!-- Parrafos que indican lo que se hara -->
     <h1>Suma, Resta, Multiplicacion y Division de 2 variables</h1>
     <p>Capturar 2 valores enteros que se puedan sumar,restar, multiplicar o dividir y muestre el resultado</p>
 <p>Variables a y b, con valores enteros</p>
 <p>el valor de salida sera un entero</p>
 <p>Valores finales de a y b se enviaran a la variable resultados</p>
 
+<!-- Campos que Capturan los valores -->
 <label for="a">Ingrese el primer numero</label>
 <input type="number" id="a" name="a"> <br>
 <label for="b">Ingrese el segundo numero</label>
 <input type="number" id="b" name="b"> <br> <br>
 
+<!-- Botones que llaman a sus funciones -->
 <button onclick="sumar()">sumar</button> 
 <button onclick="restar()">restar</button>
 <button onclick="multiplicar()">multiplicar</button>
 <button onclick="dividir()">dividir</button><br> <br>
+
+<!-- Input que muestra el resultado -->
 <label for="resultado">Resultado de la operacion</label>
 <input type="number" id="resultado" name="resultado"> <br>
 
+<!--  -->
 <script>
     function sumar(){ 
+        //se capturan los valores de los inputs y se almacenana en variables
       var a = document.getElementById("a").value;
       var b = document.getElementById("b").value;
+      //Se define la variable redsultado
       var resultado;
-
+     //Verificacion de las cadenas si son cadenas vacias
     if(a == ""){
         a = 0;}
         else{
@@ -41,8 +49,9 @@
         else{
             b = parseInt(b);
         }
+        //resultado de la operacion
         resultado = a + b;
- 
+ //se muestra el resultado de la operacion en el navegador
     document.getElementById("resultado").value = resultado
      }
      </script>
